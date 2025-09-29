@@ -19,7 +19,7 @@ function App() {
             <Error />
             :
             <>
-              <h1 className="text-6xl text-center font-bold">How’s the sky looking today?</h1>
+              <h1 className="text-6xl text-center font-bold max-md:text-[3.5rem]">How’s the sky looking today?</h1>
               <SearchBox />
               <WeatherGrid />
             </>
