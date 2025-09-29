@@ -9,6 +9,7 @@ import Error from "./components/Error";
 function App() {
   const { error } = useContext(Store)
 
+
   return (
     <main className="min-h-screen">
       <Header />

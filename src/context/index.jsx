@@ -132,7 +132,6 @@ export function WeatherProvider({ children }) {
 
     // auto fetch on mount
     useEffect(() => {
-        setWeatherData(null)
         if (geoLocationData) {
             getWeather(geoLocationData);
         } else if (navigator.geolocation) {
@@ -142,7 +141,8 @@ export function WeatherProvider({ children }) {
                     const geoLocationData = await getGeolocation(latitude, longitude);
                     getWeather({ longitude, latitude, ...geoLocationData });
                 },
-                () => getWeather({ longitude: 52.52, latitude: 13.41 }) // fallback Berlin
+                () => getWeather({ longitude: 52.52, latitude: 13.41 }), // fallback Berlin
+                { enableHighAccuracy: true }
             );
         } else {
             getWeather({ longitude: 52.52, latitude: 13.41 })
