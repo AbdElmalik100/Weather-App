@@ -15,6 +15,7 @@ export function WeatherProvider({ children }) {
     })
     const [mode, setMode] = useState('Switch to Imperial')
     const [error, setError] = useState(false)
+    const [loading, setLoading] = useState(true)
 
     // --- Helpers ---
     const convertWindSpeed = (value) => {
@@ -44,6 +45,7 @@ export function WeatherProvider({ children }) {
     }
 
     const getGeolocation = async (latitude, longitude) => {
+        setLoading(true)
         try {
             setError(false)
             const response = await fetch(
@@ -54,11 +56,13 @@ export function WeatherProvider({ children }) {
         } catch (error) {
             console.log(error);
             setError(true)
+        } finally {
+            setLoading(false)
         }
     };
 
     const getWeather = async ({ latitude, longitude, country, city }) => {
-        setWeatherData(null)
+        setLoading(true)
         setError(false)
         const params = {
             latitude,
@@ -126,12 +130,15 @@ export function WeatherProvider({ children }) {
         } catch (err) {
             console.error("Weather fetch error:", err);
             setError(true)
+        } finally {
+            setLoading(false)
         }
     };
 
 
     // auto fetch on mount
     useEffect(() => {
+        // setWeatherData(null)
         if (geoLocationData) {
             getWeather(geoLocationData);
         } else if (navigator.geolocation) {
@@ -155,6 +162,7 @@ export function WeatherProvider({ children }) {
             selectedValue,
             mode,
             geoLocationData,
+            loading,
             error,
             getWeather,
             setGeoLocationData,

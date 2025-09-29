@@ -12,7 +12,7 @@ const WeatherInfo = () => {
             <picture>
                 <source media="(min-width:768px)" srcSet="/images/bg-today-large.svg" />
                 <source media="(max-width:767px)" srcSet="/images/bg-today-small.svg" />
-                <img src="/images/bg-today-large.svg" alt="Background Today" className='w-full h-full' />
+                <img loading="eager" src="/images/bg-today-large.svg" alt="Background Today" className='w-full h-full' />
             </picture>
             <div className="absolute top-1/2 -translate-y-1/2 z-20 flex items-center justify-between w-full p-8 max-md:flex-col max-md:gap-2">
                 <div className='max-md:text-center'>

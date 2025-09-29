@@ -9,9 +9,9 @@ import SkeletonLoading from "./SkeletonLoading"
 
 
 const WeatherGrid = () => {
-    const { weatherData } = useContext(Store)
+    const { loading } = useContext(Store)
     return (
-        weatherData
+        !loading
             ?
             <div className="weather-grid flex gap-8 max-xl:flex-col">
                 <div className="left-side w-3/4 max-xl:w-full flex flex-col gap-8">
