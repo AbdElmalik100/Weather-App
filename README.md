@@ -1,6 +1,6 @@
-# Browser Extension Manager UI
+# Weather App
 
-Responsive Front-End Mentor Challenge (HTML + CSS + JS)
+Responsive Front-End Mentor Challenge (HTML + CSS + JS + API)
 
 ## Tools
 
@@ -12,7 +12,7 @@ Responsive Front-End Mentor Challenge (HTML + CSS + JS)
 
 ## Level
 
-- Junior
+- Intermediate
 
 ## Installation
 
@@ -31,4 +31,4 @@ npm run build
 ```
 
 # Demo Site
-https://browser-extension-manager-ui-lime.vercel.app/
+https://weather-app-sepia-nine-33.vercel.app
