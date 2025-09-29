@@ -34,7 +34,7 @@ const HourlyForecast = () => {
     return (
         <div className="right-side w-1/3 max-xl:w-full rounded-3xl bg-Neutral-800 flex flex-col gap-1 2xl:h-[835.88px] h-[742.42px] relative overflow-hidden">
             <div className="flex items-center justify-between sticky bg-Neutral-800 p-4 w-full top-0">
-                <h3 className="font-semibold text-xl">Hourly forecast</h3>
+                <h3 className="font-semibold text-xl max-md:text-base">Hourly forecast</h3>
                 <Select onValueChange={setSelectedDay} defaultValue={selectedDay}>
                     <SelectTrigger className="w-auto bg-Neutral-600 capitalize">
                         <SelectValue placeholder="Select a day" />
