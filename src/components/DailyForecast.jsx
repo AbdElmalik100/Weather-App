@@ -23,7 +23,7 @@ const DailyForecast = () => {
                         <div key={index} className="rounded-xl bg-Neutral-800 border border-Neutral-600 p-4 flex flex-col gap-4 items-center w-full max-lg:w-[calc((100%/3)-12px)]">
                             <span className="font-medium text-lg">{el.day}</span>
                             <WeatherImage weatherCode={el.weatherCode} />
-                            <div className="flex items-center justify-between gap-4 font-medium text-base max-lg:text-xs">
+                            <div className="flex items-center justify-between gap-4 font-medium text-base max-lg:text-xs w-full">
                                 <span>{el.min}</span>
                                 <span>{el.max}</span>
                             </div>
