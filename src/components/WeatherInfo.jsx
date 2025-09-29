@@ -21,7 +21,7 @@ const WeatherInfo = () => {
                 </div>
                 <div className="flex items-center gap-4">
                     <WeatherImage weatherCode={weatherData.current.weatherCode} />
-                    <span className="text-8xl  font-bold font-DM-Sans italic">{weatherData.current.temperature}</span>
+                    <span className="text-8xl max-lg:text-7xl font-bold font-DM-Sans italic">{weatherData.current.temperature}</span>
                 </div>
             </div>
         </div>
