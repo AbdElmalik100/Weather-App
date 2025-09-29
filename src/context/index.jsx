@@ -138,7 +138,7 @@ export function WeatherProvider({ children }) {
 
     // auto fetch on mount
     useEffect(() => {
-        // setWeatherData(null)
+        setLoading(true)
         if (geoLocationData) {
             getWeather(geoLocationData);
         } else if (navigator.geolocation) {

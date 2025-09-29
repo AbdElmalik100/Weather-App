@@ -14,9 +14,9 @@ const WeatherInfo = () => {
                 <source media="(max-width:767px)" srcSet="/images/bg-today-small.svg" />
                 <img loading="eager" src="/images/bg-today-large.svg" alt="Background Today" className='w-full h-full' />
             </picture>
-            <div className="absolute top-1/2 -translate-y-1/2 z-20 flex items-center justify-between w-full p-8 max-md:flex-col max-md:gap-2">
+            <div className="absolute top-1/2 -translate-y-1/2 z-20 flex items-center justify-between w-full p-8 max-md:flex-col max-md:gap-2 h-full max-md:px-4">
                 <div className='max-md:text-center'>
-                    <h2 className="text-3xl font-bold mb-2">{weatherData.city}, {weatherData.country}</h2>
+                    <h2 className="text-3xl font-bold mb-2 max-md:text-2xl">{weatherData.city}, {weatherData.country}</h2>
                     <span className="opacity-80 text-base">{formattedDate()}</span>
                 </div>
                 <div className="flex items-center gap-4">
